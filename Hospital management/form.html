@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Feedback</title>
+</head>
+<style>
+body
+{
+	background-image: url("image.jpeg");
+	background-size: cover;
+}
+#abc
+{
+	margin-left: 200px;
+}
+.submit
+  {
+    
+  background-color: #3fb6b2;
+    
+  padding: 12px 45px;
+    
+  border-radius: 5px;
+      
+  color: #ffffff;
+   
+  border: none;
+    
+  outline: none;
+    
+  margin: 0;
+    
+  font-weight: bold;
+  
+}
+  
+.submit:hover
+  {
+    
+  background-color: #dd0000;
+  
+}
+  
+textarea
+  {
+    
+  height: 100px;
+
+  }
+  
+input, textarea 
+  {
+    
+  margin-bottom: 10px;
+    
+  font-size: 11pt;
+    
+  padding: 15px 10px 10px;
+    
+  border: 1px solid #cecece;
+    
+  background-color: #efefef;
+    
+  color: #787575;
+   
+  border-radius: 5px;
+    
+  width: 70%;
+    
+  outline: none;
+
+  }
+</style>
+</style>
+<body>
+		
+    <div id="abc">
+	<h1>Share your feedback</h1><br><h2>We love to hear about our doctors, facilities<br>and your treatment at Kartavya.</h2>
+    </div>
+	<br>
+	<hr color="white">
+	<br>
+				<form method="post" onsubmit="return(contactForm())" name="myform" align="center">
+					<input type="text" name="name" class="form-control" placeholder="Full Name"><br>
+
+					<input type="number" name="phone" class="form-control" placeholder="Phone Number +91"><br>
+
+					<input type="text" name="email" class="form-control" placeholder="EMail" ><br>
+
+					<div id="abc"><p align="left"><b>I wanted Kartavya team to respond to my feedback</b></p></div><br>
+
+					<textarea name="enquiry" class="form-control" placeholder="*FEEDBACK" rows="4" required=""></textarea><br>
+
+					<input type="submit" class="form-control submit" value="SUBMIT">
+				</form>
+
+				<center>
+					<mark style="color:yellow"><h1 style="color:red" id="demo"></h1></mark>
+				</center>
+
+
+	<script type="text/javascript">
+function validateEmail()
+{
+ 
+   var emailID = document.myform.email.value;
+   atpos = emailID.indexOf("@");
+   dotpos = emailID.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2)) 
+   {
+       document.myform.email.focus() ;
+				document.getElementById("demo").innerHTML="Please enter correct email id!!!";
+       
+       return false;
+   }
+   return( true );
+}
+
+		function contactForm() {
+      if (document.myform.name.value=="") {
+        document.myform.name.focus(); 
+        document.getElementById("demo").innerHTML="Fill out your name!!!";
+        return(false);
+        }
+		         if (document.myform.phone.value.length!="10") {
+				document.myform.name.focus();	
+				document.getElementById("demo").innerHTML="Please enter a valid contact number!";
+				return(false);
+				}
+				 if( document.myform.email.value == "" )
+  				 {
+     				        document.getElementById("demo").innerHTML="Fill out your name!!!";
+     					document.myform.email.focus() ;
+						return false;
+   				}else{
+    				 var ret = validateEmail();
+    				}
+     			if( ret == false )
+     			{
+          			return false;
+    			 }
+  				 return( true );
+		}
+
+	</script>
+
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

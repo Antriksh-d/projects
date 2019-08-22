@@ -1,0 +1,196 @@
+<html>
+<head>
+	<title>Kartavya</title>
+</head>
+<style>
+body
+{
+	background-image: url("image.jpeg");
+	background-size: cover;
+}
+#abc
+{
+	margin-left: 200px;
+}
+.submit
+  {
+    
+  background-color: #3fb6b2;
+    
+  padding: 12px 45px;
+    
+  border-radius: 5px;
+      
+  color: #ffffff;
+   
+  border: none;
+    
+  outline: none;
+    
+  margin: 0;
+    
+  font-weight: bold;
+  
+}
+  
+.submit:hover
+  {
+    
+  background-color: #dd0000;
+  
+}
+  
+textarea
+  {
+    
+  height: 100px;
+
+  }
+  
+input, textarea 
+  {
+    
+  margin-bottom: 10px;
+    
+  font-size: 11pt;
+    
+  padding: 15px 10px 10px;
+    
+  border: 1px solid #cecece;
+    
+  background-color: #efefef;
+    
+  color: #787575;
+   
+  border-radius: 5px;
+    
+  width: 70%;
+    
+  outline: none;
+
+  }
+</style>
+  <body>
+	<div id="abc">
+	<h1>Share your feedback</h1><br><h2>We love to hear about our doctors, facilities<br>and your treatment at Kartavya.</h2>
+    </div>
+	<br>
+	<hr color="white">
+	<br>
+    <form id="contact-form" method="post" onsubmit="return(contactForm())" action="TY.html" name="myform" align="center">
+					<input type="text" name="name" class="form-control" placeholder="Full Name"><br>
+
+					<input type="number" name="phone" class="form-control" placeholder="Phone Number +91" required=""><br>
+
+					<input type="text" name="email" class="form-control" placeholder="EMail" ><br>
+
+					<div id="abc"><p align="left"><b>I wanted Kartavya team to respond to my feedback</b></p></div><br>
+
+					<textarea name="enquiry" class="form-control" placeholder="FEEDBACK" rows="4" required=""></textarea><br>
+
+					<input type="submit" class="form-control submit" value="SUBMIT">
+				</form>
+    <p id="demo"></p>
+    <script>
+    	<script type="text/javascript">
+		function validateEmail()
+{
+ 
+   var emailID = document.myform.email.value;
+   atpos = emailID.indexOf("@");
+   dotpos = emailID.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2)) 
+   {
+       document.myform.email.focus() ;
+				document.getElementById("demo").innerHTML="Please enter correct email id!!!";
+       
+       return false;
+   }
+   return( true );
+}
+
+		function contactForm() {
+		
+				if (document.myform.name.value=="") {
+				document.myform.name.focus();	
+				document.getElementById("demo").innerHTML="Fill out your name!!!";
+				return(false);
+				}
+				 if( document.myform.email.value == "" )
+  				 {
+     				alert( "Please provide your Email!" );
+     					document.myform.email.focus() ;
+						return false;
+   				}else{
+    				 var ret = validateEmail();
+    				}
+     			if( ret == false )
+     			{
+          			return false;
+    			 }
+  				 return( true );
+		}
+
+
+	/*function validateForm()
+	{
+		var m=document.forms["myForm"]["msg"].value;
+		var d=document.forms["myForm"]["date"].value;
+		var pid=document.forms["myForm"]["p_id"].value;
+		var n=document.forms["myForm"]["name"].value;
+		var e=document.forms["myForm"]["email"].value;
+		var no=document.forms["myForm"]["contact"].value;
+
+		if(m.value=="")
+		{
+			window.alert("Please fill the feedback");
+			m.focus();
+			return false;
+		}
+
+		if(strlen(pid).value != 11)
+		{
+			window.alert("Patient id must be of 11 digits");
+			pid.focus();
+			return false;
+		}
+
+		if(n.value=="")
+		{
+			window.alert("Name has to be filled out");
+			n.focus();
+			return false;
+		}
+
+		if(e.value=="")
+		{
+			window.alert("Please enter a valid e-mail address.");
+			e.focus();
+			return false;
+		}
+
+		if(e.value.indexOf("@",0)<0)
+		{
+			window.alert("Please enter a valid e-mail address.");
+			e.focus();
+			return false;
+		}
+
+		if(e.value.indexOf(".",0)<0)
+		{
+			window.alert("Please enter a valid e-mail address.");
+			e.focus();
+			return false;
+		}
+
+		if(no.value=="")
+		{
+			window.alert("Please enter your telephone number");
+			no.focus();
+			return false;
+		}
+	}*/
+
+  </script>
+  </body>
+</html>

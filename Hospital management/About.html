@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kartavya</title>
+	
+</head>
+<style>
+#l
+{
+	color: white;
+	background-color: rgb(55,55,55);
+	font-size: 130%;
+	width: auto;
+	float: right;	
+	width: 200px;
+	text-align: center;
+	height: 30px
+
+}
+#b
+{
+	color: #222;
+	background-color: white;
+	font-size: 120%;
+	width: auto;
+	float: right;	
+	width: 249px;
+	text-align: center;
+	display: inline-block;
+
+
+}
+#c
+{
+	display: inline;
+	width: 200px;
+	background: red;
+	color: white;
+	float: right;
+	text-align: center;
+	border-radius: 25px;
+	height: 30px;
+	font-size: 120%;
+}
+#d
+{
+	text-align: center;
+	font-size: 150%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: tomato;
+    text-align: center;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.abc
+{
+	padding:50px;
+
+}
+ul
+{
+	list-style: none;
+}
+</style>
+<body>	
+	<link rel="stylesheet" type="text/css" href="hospital1.css">
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+    <div>
+	<a href="About.html"><p id="l"> About us  </p></a>
+	<a href="https://www.google.com/maps/place/Vivekanand+Arogya+Kendra/@28.471032,77.029099,18z/data=!4m5!3m4!1s0x0:0x1702e75c3dd332d6!8m2!3d28.4710319!4d77.0290991?hl=en-GB"><p id="l"> Our location  </p></a>
+    <a href="help.html"><p id="l"> Help Desk  </p></a>
+    <a href="signup.html"><p id="l"> SignUp </p></a>
+    <a href="Login.html"><p id="l"> Login  </p></a>
+    <p id="l"> Emergency:102</p>
+    </div>
+    <div>
+    <a href="Login.html"><p id="c">Book an Appointment</p></a>
+	<a href="hospital.html"><img src="logo.jpg"height="90px" width="90"></a>
+	<div class="dropdown">
+		<p id="b"> Doctors  </p>
+		<div class="dropdown-content">
+          <ul>
+          	<div><li>Dr. Anuj Yadav- Pediatrician</li><hr></div>
+          	<div><li>Dr. Prince Dixit- Orthopedic Surgeon</li><hr></div>
+          	<div><li>Dr. Vineeta Goyal- Opthologist</li><hr></div>
+          	<div><li>Dr. Trihaan Venugopal- Orthodentist</li><hr></div>
+          	<div><li>Dr. Shitika Sharma- Gynaecologist</li><hr></div>
+          </ul>
+        </div>
+  </div>
+  <div class="dropdown">
+	<p id="b"> Treatments  </p>
+	<div class="dropdown-content">
+		<div class="abc">
+		<table border="0" cellpadding="15">
+			<tr>
+				<td>Coronary Artery Disease</td>
+				<td>Head and Neck Cancer</td>
+				<td>Acute Myloid Leukemia</td>
+				<td>Epilepsy</td>
+				<td>Hip Fracture</td>
+				<td>Parkinson's Disease</td>
+			</tr>
+			<tr>
+				<td>Refractive Error</td>
+				<td>Prostate Cancer</td>
+				<td>Chronic Kidney Disease</td>
+				<td>Cerebral Stroke</td>
+				<td>Sepsis</td>
+				<td>Liver Cirrhosis</td>
+			</tr>
+			<tr>
+				<td>Rheumatoid Arthitis</td>
+				<td>Hypertension</td>
+				<td>Diabetes</td>
+				<td>Bronchial Asthama</td>
+				<td>Stomach Cancer</td>
+				<td>Chronic Otitis Media</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</div>
+    <div class="dropdown">
+    <p id="b"> Facilities and Services  </p>
+    <div class="dropdown-content">
+    	<div class="abc">
+    	<table border="0" cellpadding="15">
+    		<tr> 
+    			<td>Air Ambulance</td>
+    			<td>Critical Care Units</td>
+    			<td>Lab Tests and Diagnostics</td>
+    			<td>Emergency and Trauma Care</td>
+    	    </tr>
+    		<tr>
+    			<td>eCLINIC-Telemedicine Services</td>
+    			<td>Day Care</td>
+    			<td>Wards and Rooms</td>
+    			<td>Patient Support Services</td>
+			</tr>
+    	</table>
+    </div> 	
+    </div>
+</div>
+    <i><b><h3 id="b">Personal Care, <br>Professional Approach</h3></b></i>
+	</div>
+	<img src="doctor2.png" height="650px" width="100%">
+	<center><img src="vid.GIF"></center>
+	<img src="red.png" height="500px" width="100%">
+    <br>
+</body>
+</html>
