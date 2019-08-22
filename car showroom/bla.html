@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript">
+	function validate() 
+	{
+		var x=document.myform.fname.value;
+		if (x=="")
+		{
+			alert("Enter your first name");
+			return false;
+		}
+		var y=document.myform.lname.value;
+		if(y=="")
+		{
+
+			alert("Enter your last name");
+			return false;
+		}
+		var emailId=document.myform.email.value;
+		var atpos=emailId.indexOf('@');
+		var dotpos=emailId.lastIndexOf('.');
+		if(dotpos-atpos<2)
+		{
+			alert("Enter a correct emailID");
+			return false;
+		}
+		if(emailId=="")
+		{
+			alert("Enter email id");
+			resturn false;
+		}
+		else
+		return true;
+	}
+</script>
+<body>
+<form name="myform"  onsubmit="return validate()" method="post">
+	Firstname:<input type="text" name="fname" >
+	Lastname:<input type="text" name="lname" >
+	email:<input type="text" name="email" >
+
+	<input type="submit" name="submit">
+</form>
+</body>
+</html> 
