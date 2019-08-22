@@ -1,0 +1,83 @@
+h1
+{	text-align:center;
+	color:turquoise;
+}
+h2
+{	font-size: 400%;
+	text-align:center;
+	color:Gold;
+}
+body
+{	background-image: url("bg1.jpeg");
+	background-repeat: repeat;
+		
+}
+
+p
+{	font-size: 20;
+	color: gold;
+	text-align:center;
+}
+
+a:visited
+{	color:red;
+}
+a:link
+{	color:white;
+	text-decoration: none;
+}
+a:hover
+{	color:blue;
+	text-decoration: underline;
+}
+a:active
+{	color:green;
+}
+
+table,th,td
+{	border:2px solid black;
+	border-color:white;
+}
+
+table#t1
+{ 	width : 75%;
+	background-color: red;
+	color:white;
+	font-size:20;	
+}
+
+table#t2
+{	background-color:red;
+	color:white;
+	font-size:20;
+	margin-left:15px;
+}
+
+/*Divisions start  from here*/
+
+.first
+{	margin:5px;
+	margin-left:25px;
+	width : 90%;
+	height: 280px;
+	border : 2px dotted blue;
+	padding : 5px 5px;
+}
+
+.external
+{	float:left;
+	width: 25%;
+	height:	85%;
+	border: 2px solid red;
+}
+
+.internal1
+{	width: 25%;
+	float:right;
+	height:40px;
+	border: 2px solid red;
+	padding: 25px 25px ;
+}
+
+
+
